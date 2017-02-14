@@ -35,7 +35,8 @@
   - `message {string}` : 在`state`为cancel/failed时附带的描述信息  
  
  ## 注意
- **动态请求的权限必须事先在`AndroidManifest.xml`中进行声明**
+ - **动态请求的权限必须事先在`AndroidManifest.xml`中进行声明**
+ - Android需依赖**0.9.5**及以上版本的SDK
  
  ## 示例
  ```vue
