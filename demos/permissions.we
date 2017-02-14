@@ -1,0 +1,38 @@
+<!-- Created by moxun on 2017/2/14. -->
+
+<template>
+    <div>
+        <text style="font-size: 60px" onclick="{{doCheck}}">Check Permission</text>
+        <text>{{check}}</text>
+        <text style="font-size: 60px; margin-top: 60px" onclick="{{doRequest}}">Request Permission</text>
+        <text>{{request}}</text>
+    </div>
+</template>
+
+<script>
+    var permissions = require('@weex-module/permissions');
+    module.exports = {
+        data: {
+            check: "-",
+            request: '-',
+        },
+        methods: {
+            doCheck: function () {
+                var self = this;
+                permissions.checkPermission("android.permission.ACCESS_NETWORK_STATE", function (e) {
+                    self.check = e;
+                });
+            },
+            doRequest: function () {
+                var self = this;
+                permissions.requestPermission("android.permission.ACCESS_FINE_LOCATION", {"title":"PLEASE","message":"A cute message"}, function (e) {
+                    self.request = e;
+                });
+            }
+        }
+    }
+</script>
+
+<style>
+
+</style>
