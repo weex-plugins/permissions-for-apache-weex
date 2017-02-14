@@ -11,8 +11,8 @@
 ### `checkPermission(permission, callback)`
 检查当前是否拥有指定权限
 #### 参数
-`permission {string}`: 权限ID，详情见[Mainfest.permission](https://developer.android.com/reference/android/Manifest.permission.html)，注意，某些厂商的设备可能会包厂商自定义的权限。
-`callback {function}`: 回调函数
+- `permission {string}`: 权限ID，详情见[Mainfest.permission](https://developer.android.com/reference/android/Manifest.permission.html)，注意，某些厂商的设备可能会包厂商自定义的权限。
+- `callback {function}`: 回调函数
  - `granted {boolean}` : 是否拥有该权限
  - `permission {string}` : 请求权限的id
  - `state {string}` : 该次请求是否成功，可能值为success/cancel/failed
@@ -23,16 +23,16 @@
  ### `requestPermission(permission, rationale, callback)`
  请求权限
  #### 参数
- `permission {string}`: 权限ID
- `rationale {object}`: 对于为何需要请求该权限的描述，如果应用曾经请求过该权限并且被用户拒绝了，那么在再次请求权限的时候会通过展示该信息来向用户说明应用为何需要该权限，该参数是可选的，如果你不想在请求权限前向用户解释为何需要该权限，那么可以在此处传入一个空对象
- - `title {string}` : 描述的标题
- - `message {string}`: 描述的内容，应该清晰明了    
+ - `permission {string}`: 权限ID
+ - `rationale {object}`: 对于为何需要请求该权限的描述，如果应用曾经请求过该权限并且被用户拒绝了，那么在再次请求权限的时候会通过展示该信息来向用户说明应用为何需要该权限，该参数是可选的，如果你不想在请求权限前向用户解释为何需要该权限，那么可以在此处传入一个空对象
+  - `title {string}` : 描述的标题
+  - `message {string}`: 描述的内容，应该清晰明了    
  
- `callback {function}`: 回调函数
- - `granted {boolean}` : 是否拥有该权限
- - `permission {string}` : 请求权限的id
- - `state {string}` : 该次请求是否成功，可能值为success/cancel/failed
- - `message {string}` : 在`state`为cancel/failed时附带的描述信息  
+ - `callback {function}`: 回调函数
+  - `granted {boolean}` : 是否拥有该权限
+  - `permission {string}` : 请求权限的id
+  - `state {string}` : 该次请求是否成功，可能值为success/cancel/failed
+  - `message {string}` : 在`state`为cancel/failed时附带的描述信息  
  
  ## 注意
  **动态请求的权限必须事先在`AndroidManifest.xml`中进行声明**
