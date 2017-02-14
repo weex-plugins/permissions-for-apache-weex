@@ -1,17 +1,14 @@
 {
-  "name": "${pluginName}",
-  "version": "0.0.0",
-  "description": "Weex Plugin-${pluginName}",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "name": "weex-permissions",
+  "version": "0.1.0",
+  "description": "Weex permission plugin",
   "keywords": [
     "Weex",
     "Plugin",
-    "commponent",
-    "module",
-    "handle",
-    "weexpack"
+    "permission"
   ],
-  "author": ""
+  "license": "Apache 2.0",
+  "platform" : [
+    "android"
+  ]
 }
